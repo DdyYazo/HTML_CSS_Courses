@@ -1,0 +1,44 @@
+
+/* Estilos para la lista desplegable */
+.toggle-list {
+    border: 1px solid #000;
+    width: 200px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Ocultar los elementos de la lista por defecto */
+.toggle-list .toggle-list-item {
+    display: none;
+    font-family: 'Georgia', serif; /* Establecer la fuente a Georgia */
+    font-size: 18px; /* Aumentar el tamaño de la fuente */
+    color: #333; /* Cambiar el color de la fuente a un gris oscuro */
+    padding: 5px 0; /* Agregar un poco de espacio alrededor del texto */
+}
+
+/* Mostrar los elementos de la lista cuando la lista tiene la clase "open" */
+.toggle-list.open .toggle-list-item {
+    display: block;
+}
+
+/* Estilos para el encabezado de la lista */
+.toggle-list .toggle-list-header {
+    font-family: 'Georgia', serif; /* Establecer la fuente a Georgia */
+    font-size: 20px; /* Aumentar el tamaño de la fuente */
+    color: #333; /* Cambiar el color de la fuente a un gris oscuro */
+    position: relative;
+    padding: 5px 0; /* Agregar un poco de espacio alrededor del texto */
+}
+
+/* Estilos para el icono de desplegable */
+.toggle-list .toggle-list-header::after {
+    content: '▼';
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* Cambiar el icono de desplegable cuando la lista está abierta */
+.toggle-list.open .toggle-list-header::after {
+    content: '▲';
+}
