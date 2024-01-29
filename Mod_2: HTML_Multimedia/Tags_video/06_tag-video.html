@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos en memoria y de youtube en HTML</title>
+</head>
+
+<body>
+    <main>
+        <section>
+            <video controls preload="auto">
+                <source src="/HTML_Multimedia/Tags_video/video_prueba.mp4#t=10,60" />
+                <source src="/HTML_Multimedia/Tags_video/video_prueba.mp4#t=10,60" />
+            </video> 
+            <!-- La etiqueta de video posee una semantica muy precisa para que el navegador entienda y sepa como estan customizados los videos en este caso:
+                Esta etiqueta posee dos atributos muy importantes que son:
+                    1. controls: Este atributo es para que el navegador muestre los controles del video
+                    2. preload: Este atributo es para que el navegador cargue el video antes de que el usuario lo reproduzca
+                Por otro lado para que el navegador pueda reproducir varios formatos de video se usa la etiqueta
+                -> source que posee el atributo src que es la ruta del video y el atributo type que es el tipo de video que se va a reproducir, ademas permite usar el #t=10,60 para que el video se reproduzca desde el segundo 10 hasta el segundo 60 totalmente customizado -->
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/uI6o97A4IrI" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe> <!-- Esta etiqueta es para incrustar videos de youtube en la pagina web mostrandose como un embed de youtube lo que es importante especificarlo embed -->
+        </section>
+    </main>
+</body>
+
+</html>
