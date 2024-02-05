@@ -11,6 +11,7 @@
     <main>
         <section>
             <h1>Un select con malas practicas</h1>
+
             <!-- Un select con malas practicas -->
             <select name="" id="">
                 <!-- select es la etiqueta que se usa para crear listas desplegables en HTML -->
@@ -19,15 +20,18 @@
                 <!-- Por otro lado los value son los valores que se van a enviar al backend -->
                 
                 <option value="HTML5">HTML5</option>
+                <hr><!-- La etiqueta hr es para crear una linea horizontal que separa los elementos -->
                 <option value="CSS3">CSS3</option>
                 <option value="Web Standards">Web Standards</option>
             </select>
-            
+
             <h1>Un select con buenas practicas sin necesidad de hacer scroll infinito</h1>
+
             <!-- Un select con buenas practicas -->
             <input list="cursos"> <!-- list es el atributo que se usa para especificar que se va a usar una lista desplegable -->
             <datalist id="cursos"> <!-- datalist es la etiqueta que se usa para crear listas desplegables en HTML para evitar el scroll infinito -->
                 <option value="JavaScript"></option>
+                <hr>
                 <option value="HTML5"></option>
                 <option value="CSS3"></option>
                 <option value="Web Standards"></option>
