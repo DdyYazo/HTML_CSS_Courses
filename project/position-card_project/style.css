@@ -1,0 +1,157 @@
+:root {
+    --aqua: #00ffff;
+    --edge: #FF0000;
+    --firefox: #FF3333;
+    
+}
+
+* {
+  margin: 0;
+  padding: 0; 
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+.main-container {
+    padding: 20px;
+    width: 90vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffff;
+    margin-left: auto;
+    margin-right: auto; /* Para que el espacio del lado derecho sea igual al del izquierdo */
+}
+.card {
+    background: linear-gradient(to right, #e70012, #ff0112, #b20721, #5e0003, #150100);
+    box-shadow: 0px 0px 40px 5px rgba(35, 4, 7, 1);
+    position: relative;
+    border-radius: 10px;
+    width: auto;
+}
+/* Logo icon */
+.card__section--logo {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    z-index: 2;
+}
+.card__section--logo .card__figure img {
+    width: 50px;
+    border-radius: 40px;
+}
+
+@keyframes fadeIn{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }	
+}
+
+.card__section--banner {
+    position: relative;
+    text-align: center;
+    background-color: var(--aqua);
+    max-width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 25px;
+    left: 65px;
+    z-index: 1;
+    border-radius: 5px 20px 20px 5px;
+    border-bottom: 5px solid #2b9087;
+    animation: fadeIn 2s;
+}
+.card__section--banner .card__figure img {
+    width: 100%; 
+    object-fit: cover; /* Esta propiedad ajusta la imagen al tamaño del contenedor */
+    object-position: center; /* Esta propiedad centra la imagen en el contenedor */
+}
+
+/* Character kaiju */
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.card__img--character {
+    width: 70%;
+    position: relative;
+    left: 25px; 
+    z-index: 2; /* Asegura que la imagen esté sobre el mensaje de advertencia */
+    animation: slideInFromLeft 2s;
+}
+.card__figure{
+    font-size: 20%;
+}
+.card__img--character{
+    width: 70%;
+}
+
+/* Warning under content */
+    @keyframes colorChange {
+        0% {
+            color: yellow;
+        }
+        50% {
+            color: black;
+        }
+        100% {
+            color: yellow;
+        }
+    
+    }
+.card__warning {
+    position: absolute;
+    margin-left: 70px;
+    top: 75%; 
+    text-orientation: upright;
+    transform: rotate(-90deg);
+    transform-origin: left bottom;
+    z-index: 1; 
+}
+.card__warning-msg {
+    color: var(--aqua);
+    font-size: 3.8rem;
+    animation: colorChange 2s infinite;
+}
+
+.card__section--info {
+    position: absolute;
+    right: 20px;
+    top: 35%;
+    text-justify: inter-word;
+    width: 50%;
+    }
+   
+.card__info-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.card__icon {
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+    width: 30px;
+    height: auto;
+}
+
+.card__description{
+    flex-grow: 1;
+    color: #fff;
+    font-size: 1rem;
+    text-align: left;
+    font-weight: 600
+}

@@ -43,6 +43,7 @@ La web se conforma de tres conceptos:
 
 
 
+
 ## 3. Anatomia de una etiqueta de HTML
 |  |  |
 |:---------:|:---------:|
